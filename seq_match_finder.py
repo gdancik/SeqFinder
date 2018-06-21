@@ -97,9 +97,11 @@ def getHits(target_seq, file) :
 
     target_seq_len = len(target_seq)
 
+    print("searching for:", target_seq)
     # loop through sequence records in the file
     for s in sequences:
     
+        print("searching contig:", s.id)
         if len(s) < target_seq_len:    
             continue
 
@@ -159,6 +161,6 @@ if len(sys.argv) == 3 :
     print("Your results have been saved to the following file: " + output_filename)
 
 else:
-    print("Missing args (sequences FASTA file, contig FASTA file), running with hardcoded values")
-    hits = getHits(seq_dict['el312'], "seqs.fa")
-    outputRecords(hits, "direct_matches.csv", False)
+    print("Usage: python seq_match_finder.py contig.fa sequence.fa")
+    #hits = getHits(seq_dict['el312'], "seqs.fa")
+    #outputRecords(hits, "direct_matches.csv", False)

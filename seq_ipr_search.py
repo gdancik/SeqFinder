@@ -28,7 +28,10 @@ if len(sys.argv) >= 3 :
         seq_len_cutoff = int(sys.argv[3])
 
 else:
-    print("Missing args (input file, your email, [cutoff point; optional]), exiting...")
+    print("Usage: python seq_ipr_search.py inputFile e-mail [cutoff]")
+    print("\t inputFile is output from seq_match_finder.py")
+    print("\t cutoff is optional numeric cut-off for length of downstream sequence")
+ 
     exit(-1)
 
 owcheck.overwriteFile(output_filename)

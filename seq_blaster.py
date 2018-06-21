@@ -65,7 +65,10 @@ elif len(sys.argv) == 3 :
 
 
 else:
-    print("Missing args (input file, blast or blastx, [seq len cutoff]), running with hardcoded values")
+    print("Usage: python seq_blaster.py inputFile blastType cutoff")
+    print("\t inputFile is output from seq_match_finder.py")
+    print("\t blastType is BLAST or BLASTX")
+    print("\t cutoff is ALL or numeric cut-off for length of downstream sequence")
     exit(-1)
     input_file_path = "direct_matches.csv"
     output_filename = "blast_results_2_redo.csv"
