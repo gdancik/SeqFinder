@@ -1,4 +1,7 @@
-# csc_480
+# SeqFinder
+
+Identifies contigs containing a specified sequence and BLASTS the results
+
 
 For results numbered 1 through 4, the numbers correspond to the following original FASTA files:
 
